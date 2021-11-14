@@ -1,0 +1,77 @@
+﻿@model IEnumerable<ExamenFinal.Models.ProductoModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FK_Producto_Proveedor.NombreProveedor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreProducto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaVencimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UbicacionFisica)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExistenciaMinima)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecioUnidad)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FK_Producto_Proveedor.NombreProveedor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaVencimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UbicacionFisica)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExistenciaMinima)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioUnidad)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.IdProducto }) |
+                @Html.ActionLink("Details", "Details", new { id=item.IdProducto }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.IdProducto })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

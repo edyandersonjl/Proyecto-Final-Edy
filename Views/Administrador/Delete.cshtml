@@ -1,0 +1,88 @@
+﻿@model ExamenFinal.Models.AdministradorModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>AdministradorModel</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.NombreAdmin)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NombreAdmin)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ApellidoAdmin)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ApellidoAdmin)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.NumeroAdmin)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NumeroAdmin)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.CargoAdmin)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CargoAdmin)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.TituloAdmin)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TituloAdmin)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.CorreoAdmin)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CorreoAdmin)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PassAdmin)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PassAdmin)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

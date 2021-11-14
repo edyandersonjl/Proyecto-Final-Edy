@@ -1,0 +1,74 @@
+﻿@model ExamenFinal.Models.ProveedorModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>ProveedorModel</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.NombreProveedor)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NombreProveedor)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ApellidoProveedor)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ApellidoProveedor)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.NitProveedor)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NitProveedor)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.NumeroProveedor)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NumeroProveedor)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.DirProveedor)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DirProveedor)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.CorreoProveedor)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CorreoProveedor)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.IdProveedor }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

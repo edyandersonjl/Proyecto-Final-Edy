@@ -1,0 +1,65 @@
+﻿@model IEnumerable<ExamenFinal.Models.VentaModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FK_Cliente_Venta.NombreCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FK_Producto_Venta.NombreProducto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cantidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaVenta)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FK_Cliente_Venta.NombreCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FK_Producto_Venta.NombreProducto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cantidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaVenta)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.CodigoVenta }) |
+                @Html.ActionLink("Details", "Details", new { id=item.CodigoVenta }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.CodigoVenta })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

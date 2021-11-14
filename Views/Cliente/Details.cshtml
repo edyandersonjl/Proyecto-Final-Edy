@@ -1,0 +1,74 @@
+﻿@model ExamenFinal.Models.ClienteModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>ClienteModel</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.NombreCliente)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NombreCliente)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ApellidoCliente)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ApellidoCliente)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.NitCliente)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NitCliente)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.NumeroCliente)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NumeroCliente)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.DirCliente)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DirCliente)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.EmailCliente)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.EmailCliente)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.IdCliente }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

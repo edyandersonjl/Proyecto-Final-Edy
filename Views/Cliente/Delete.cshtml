@@ -1,0 +1,80 @@
+﻿@model ExamenFinal.Models.ClienteModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>ClienteModel</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.NombreCliente)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NombreCliente)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ApellidoCliente)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ApellidoCliente)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.NitCliente)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NitCliente)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.NumeroCliente)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NumeroCliente)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.DirCliente)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DirCliente)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.EmailCliente)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.EmailCliente)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>
